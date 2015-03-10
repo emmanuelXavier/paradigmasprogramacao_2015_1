@@ -6,12 +6,12 @@ import javax.swing.JOptionPane;
 public class MainOO {
     
     public static void main(String[] args){
-        jairoPerdeu();
+        jairoPerdeu2Vezes();
         uesley();
         rubem();
     }
     
-    private static void jairoPerdeu(){
+    private static void jairoPerdeu2Vezes(){
         Pessoa obj = new Pessoa();
         obj.setCpf(JOptionPane.showInputDialog("Informe o cpf"));
     }
