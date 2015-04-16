@@ -19,6 +19,32 @@ public class Main {
         cliente.setNome("Emmanuel");
         cliente.salvar();
 
+        Filme f = new Filme();
+        f.setCodigo(1);
+        f.setTitulo("Os vingadores");
+        f.setGenero(1);
+        f.setAno(2015);
+        f.setQtdExemplares(2);
+        f.setValor(100);
+        
+        Locacao locacao = new Locacao();
+        locacao.locar(1, 1);
+        
+        Locacao locacao2 = new Locacao();
+        locacao2.locar(2, 2);
+        
+        Locacao locacao3 = new Locacao();
+        locacao3.locar(3, 3);
+        
+
+        if (!locacao.addFilme(f)) 
+            JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
+        if (!locacao2.addFilme(f))
+            JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
+        if (!locacao3.addFilme(f))
+            JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
+        
+        
         
 
        
