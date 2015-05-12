@@ -5,7 +5,7 @@ import java.util.List;
 public class Filme {
     private int codigo;
     private String titulo;
-    private int genero;
+    private Genero genero;
     private int ano;
     private int qtdExemplares;
     private int qtdAlugado;
@@ -13,6 +13,7 @@ public class Filme {
     
     public Filme(){
         this.qtdAlugado = 0;
+        this.genero = new Genero();
     }
     
       public boolean salvar(){
@@ -66,13 +67,7 @@ public class Filme {
         this.titulo = titulo;
     }
 
-    public int getGenero() {
-        return genero;
-    }
-
-    public void setGenero(int genero) {
-        this.genero = genero;
-    }
+   
 
     public int getAno() {
         return ano;
@@ -100,6 +95,11 @@ public class Filme {
 
     public void setValor(float valor) {
         this.valor = valor;
+    }
+    
+    
+    public void setNomeGenero(String nome){
+        this.genero.setNome(nome);
     }
     
     

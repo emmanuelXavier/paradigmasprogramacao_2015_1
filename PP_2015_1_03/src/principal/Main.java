@@ -18,33 +18,54 @@ public class Main {
         cliente.setDataNascimento(new Date());
         cliente.setNome("Emmanuel");
         cliente.salvar();
+        
+        Funcionario funcionario = new Funcionario();
+        funcionario.setCodigo(1);
+        funcionario.setNome("Wesley");
+        funcionario.setCpf("005.464.923-23");
+        
+        Genero genero = new Genero();
+        genero.setCodigo(1);
+        genero.setNome("Terror");
 
         Filme f = new Filme();
         f.setCodigo(1);
-        f.setTitulo("Os vingadores");
-        f.setGenero(1);
+        f.setTitulo("Os Vingadores II");
+        f.setNomeGenero("Terror");
         f.setAno(2015);
         f.setQtdExemplares(2);
-        f.setValor(100);
+        f.setValor(10);
+        f = null;
+        Filme f2 = new Filme();
+        f2.setCodigo(1);
+        f2.setTitulo("Batman vs SuperMan");
+  
+        f2.setAno(2015);
+        f2.setQtdExemplares(2);
+        f2.setValor(12);
         
         Locacao locacao = new Locacao();
-        locacao.locar(1, 1);
+        locacao.locar(cliente, funcionario);
         
         Locacao locacao2 = new Locacao();
-        locacao2.locar(2, 2);
+        locacao2.locar(cliente, funcionario);
         
         Locacao locacao3 = new Locacao();
-        locacao3.locar(3, 3);
+        locacao3.locar(cliente, funcionario);
         
 
         if (!locacao.addFilme(f)) 
             JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
-        if (!locacao2.addFilme(f))
+        if (!locacao.addFilme(f2)) 
+            JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
+      /*  if (!locacao2.addFilme(f))
             JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
         if (!locacao3.addFilme(f))
             JOptionPane.showMessageDialog(null, "Filme nao disposiivel");
+        */
         
         
+        locacao.finalizarLocacao();
         
 
        
