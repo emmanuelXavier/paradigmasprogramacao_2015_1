@@ -24,7 +24,9 @@ public class Pp_2015_1_05 {
         cliente.setAgencia("2345");
         cliente.setNumero("234");
         cliente.setTipo(tipo);
-        
+       // cliente.
+                
+
         JOptionPane.showMessageDialog(null, cliente.getNome());
 
         

@@ -12,7 +12,9 @@ public class PP_2015_1_06 {
         
         String[] opcoes = {"Cadastrar","Salvar","sair"};
         JOptionPane.showMessageDialog(null, (String) JOptionPane.showInputDialog(null, "infome", "A sistemas", 2, null, opcoes, null));
-        
+
     }
+    
+   
     
 }
